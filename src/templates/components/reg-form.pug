@@ -1,0 +1,95 @@
+mixin reg-form()
+    .reg-form
+        form.container.reg-form__submit(method="post" action='http://httpbin.org/post') 
+            .row.js-reg-form__basic.reg-form__basic
+                .col-xl-2.col-lg-2.col-md-2.col-sm-2.col-1
+                    .reg-form__circle
+                        .reg-form__numeral 1
+                .col-xl-10.col-lg-10.col-md-10.col-sm-10.col-11
+                    h1.reg-form__title.col-12 Выбор заявителя
+                    .js-reg-form__step-1.reg-form__step.container
+                        .row
+                            label.reg-form__container.js-reg-form__container-1.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 <b> Константинопольский К.К. </b> <br> Физическое лицо
+                                input.reg-form__old-checkmark(type="radio" name="radio")
+                                span.reg-form__checkmark 
+                            label.reg-form__container.js-reg-form__container-1.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 <b> ООО «Константинополь» </b> <br> Юридическое лицо
+                                input.reg-form__old-checkmark(type="radio" name="radio")
+                                span.reg-form__checkmark
+                            button.reg-form__button.js-reg-form__button-1.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Продолжить
+                .reg-form__margin-block.col-12            
+                .col-xl-2.col-lg-2.col-md-2.col-sm-2.col-1
+                    .reg-form__circle
+                        .reg-form__numeral 2
+                .col-xl-10.col-lg-10.col-md-10.col-sm-10.col-11
+                    h1.reg-form__title Данные заявителя
+                    .reg-form__step.container 
+                        .row   
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="first name") Фамилия <br>
+                               input.reg-form__input(type="text" name="first name" value="Константинопольский") 
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="second name") Имя <br>
+                                input.reg-form__input(type="text" name="second name" value="Константин")
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="third name") Отчество <br>
+                                input.reg-form__input(type="text" name="third name" value="Константинович")
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="email") Электронная почта <br>
+                                input.js-reg-form__input-email.reg-form__input(type="email" name="email" value="konstantinopolskiy@mail.ru")
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="tel") Телефон <br>
+                                input.js-reg-form__input-phone.reg-form__input(type="tel" name="tel" value="+7 (901) 123-45-67")
+                            span.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 <b> Документ, удостоверяющий личность </b> <br>
+                            label.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(for="document") Документ <br>
+                                input.reg-form__input(type="text" name="document" value="Паспорт")
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-12
+                            label.reg-form__container-second.reg-form__container-second_padding-right_15px.col-xl-3.col-lg-3.col-md-3.col-sm-3.col-6(for="series") Серия <br>
+                                input.js-reg-form__input-pasport-series.reg-form__input(type="text" name="series" value="5700")
+                            label.reg-form__container-second.reg-form__container-second_padding-left_15px.col-xl-5.col-lg-5.col-md-5.col-sm-5.col-6(for="number") Номер <br>
+                                input.js-reg-form__input-pasport-number.reg-form__input(type="text" name="number" value="555888")
+                            label.reg-form__container-second.col-8 Когда выдан <br>
+                            .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-12
+                            label.reg-form__container-second.reg-form__container-second_padding-right_15px.reg-form__container-second_color_grey.col-xl-3.col-lg-3.col-md-3.col-sm-3.col-4(for="day") День <br>
+                                input.js-reg-form__input-date.reg-form__input(type="text" name="day" value="19")
+                            label.reg-form__container-second.reg-form__container-second_padding-left_15px.reg-form__container-second_padding-right_15px.reg-form__container-second_color_grey.col-xl-3.col-lg-3.col-md-3.col-sm-3.col-4(for="month") Месяц <br>
+                                input.js-reg-form__input-date.reg-form__input(type="text" name="month" value="10")
+                            label.reg-form__container-second.reg-form__container-second_padding-left_15px.reg-form__container-second_color_grey.col-xl-2.col-lg-2.col-md-2.col-sm-2.col-4(for="year") Год <br>
+                                input.js-reg-form__input-date.reg-form__input(type="text" name="year" value="19")             
+                            button.reg-form__button.js-reg-form__button-1.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Продолжить
+                .reg-form__margin-block.col-12            
+                .col-xl-2.col-lg-2.col-md-2.col-sm-2.col-1
+                    .reg-form__circle
+                        .reg-form__numeral 3
+                .col-xl-10.col-lg-10.col-md-10.col-sm-10.col-11
+                    h1.reg-form__title Согласие 
+                    .reg-form__step.container 
+                        .row   
+                            span.reg-form__container-second.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 <b> Требуется ваше согласие по следующим пунктам </b>
+                            ul.reg-form__container-second.reg-form__container-second-ul.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12
+                                li.reg-form__container-second_margin-bottom_8px Я подтверждаю, что вся представленная информация является достоверной и точной;
+                                li.reg-form__container-second_margin-bottom_8px Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;
+                                li.reg-form__container-second_margin-bottom_8px Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;   
+                                li.js-reg-form__container-second-1.reg-form__container-second_margin-bottom_8px Со сроками оказания государственной услуги ознакомлен.
+                            label.reg-form__container.js-reg-form__container-2.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Я подтверждаю свое согласие со всеми вышеперечисленными пунктами
+                                input.reg-form__old-checkbox(type="checkbox")
+                                span.reg-form__checkbox
+                            label.reg-form__container.js-reg-form__container-2.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Я уведомлен о том, что результат будет получен в электронном виде
+                                input.reg-form__old-checkbox(type="checkbox")
+                                span.reg-form__checkbox
+                            .reg-form__container.reg-form__container_background_pink.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Пожалуйста, еще раз внимательно проверьте все данные перед отправкой
+                                img.reg-form__checkalarm(src="../images/Vector3.svg")           
+                            button.reg-form__button.js-reg-form__button-2.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12(type='submit') Отправить
+                            span.reg-form__rules.reg-form_margin-bottom_24px.col-xl-8.col-lg-8.col-md-8.col-sm-8.col-12 Нажимая кнопку «Отправить», вы соглашаетесь с 
+                               a.reg-form__rules-link(href="#" target="_blank") правилами хранения и обработки персональных данных 
+            .row.js-reg-form__after-sending                              
+                .col-xl-2.col-lg-2.col-md-2.col-sm-2.col-1
+                    .js-reg-form__circle.reg-form__circle.reg-form__circle_backgroundColor_green.reg-form_display_none
+                        img(src="../images/Vector2.svg")
+                .col-xl-10.col-lg-10.col-md-10.col-sm-10.col-11
+                    h1.js-reg-form__title.reg-form__title.reg-form__title_color_black.reg-form_display_none Заявление принято
+                    .js-reg-form__step.reg-form__step.container 
+                        .row   
+                            span.reg-form__container-second.col-xl-10.col-lg-10.col-md-10.col-sm-10.col-12 Номер заявления
+                                span <b> RU-1234567. </b>
+                                span.reg-form__container-second_margin-bottom_24px.col-xl-10.col-lg-10.col-md-10.col-sm-10.col-12 Максимальный срок предоставления услуги — 20 рабочих дней. Следите за статусом заявления в     
+                                a(href="#" target="_blank") Личном кабинете. <br> <br>
+                            span.reg-form__container-second.reg-form_margin-bottom_24px.col-xl-10.col-lg-10.col-md-10.col-sm-10.col-12 Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67. 
+                            span.col-5.reg-form__button-wrapper_padding-right_15px           
+                                button.js-reg-form__button-3.reg-form__button-3.reg-form__button Вернуться в каталог
+                            span.col-5.reg-form__button-wrapper_padding-left_15px  
+                                button.js-reg-form__button-3.reg-form__button-3.reg-form__button.reg-form__button_inversion Перейти в личный кабинет

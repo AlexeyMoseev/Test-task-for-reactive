@@ -1,0 +1,250 @@
+.reg-form {
+    background-color: white;
+    font-style: normal;
+    font-family: "GOST UI 2";
+    font-size: 18px;
+    line-height: 24px;
+    color: #3B4256;
+
+    &__circle {
+        margin-top: 16px;
+        margin-left: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+        background: #BCC3CA;
+        border-radius: 50%;
+
+        &_backgroundColor_green {
+            background-color: #1BC400;
+        }
+    }
+
+    &__numeral {
+        font-family: Roboto;
+        font-size: 22px;
+        line-height: 28px;
+        color: white;
+    }
+
+    &__title {
+        font-family: "SF-UI-Display-Regular";
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 32px;
+        color: #BCC3CA;
+
+        &_color_black {
+            color: #3B4256;
+        }
+    }
+
+    &__container {
+        background: #F5F5F7;
+        border-radius: 4px;
+        position: relative;
+        padding: 16px 16px 16px 48px;
+        margin-bottom: 16px;
+        cursor: pointer;
+
+        &_active {
+            background: #FFFFFF;
+            border: 2px solid #0061D9;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        &_background_pink {
+            background: #FFF5E6;
+            cursor: default;
+        }
+
+        &-second {
+            margin-bottom: 16px;
+
+            &-ul {
+                padding-left: 22px;
+            }
+
+            &_padding-right_15px {
+                padding-right: 15px;
+            }
+
+            &_padding-left_15px {
+                padding-left: 15px;
+            }
+
+            &_margin-bottom_8px {
+                margin-bottom: 8px;
+            }
+
+            &_color_grey {
+                color: #848E99;
+            }
+        }
+
+        &:hover input~.reg-form__checkmark,
+        &:hover input~.reg-form__checkbox {
+            background-color: #ccc;
+        }
+
+        & .reg-form__checkmark:after {
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        & .reg-form__checkbox:after {
+            top: 3px;
+            left: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__old-checkmark,
+    &__old-checkbox {
+        position: absolute;
+        opacity: 0;
+
+        &:checked~.reg-form__checkmark,
+        &:checked~.reg-form__checkbox {
+            background-color: #2196F3;
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    &__checkmark {
+        @extend %check-shared;
+        border-radius: 50%;
+    }
+
+    &__checkbox {
+        @extend %check-shared;
+    }
+
+    &__checkalarm {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+
+    &__button {
+        width: 100%;
+        margin-bottom: 24px;
+        height: 48px;
+        font-family: "GOST UI 2";
+        font-size: 18px;
+        line-height: 24px;
+        background: #0061D9;
+        border-radius: 4px;
+        color: #FFFFFF;
+
+        &_inversion {
+            background-color: #FFFFFF;
+            color: #0050B2;
+            border-style: solid;
+            border-color: #0050B2;
+            border-width: 2px;
+        }
+
+        &-wrapper {
+            &_padding-right_15px {
+                padding-right: 15px;
+            }
+
+            &_padding-left_15px {
+                padding-left: 15px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    &__margin-block {
+        background: #E5E5E5;
+        display: block;
+        height: 24px;
+    }
+
+    &__input {
+        height: 48px;
+        width: 100%;
+    }
+
+    &__step {
+        display: none;
+    }
+
+    &__rules {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    //Глобальные моодификаторы
+
+    &_margin-bottom_24px {
+        margin-bottom: 24px;
+    }
+
+    &_display_none {
+        display: none;
+    }
+
+    //Шаблоны
+
+    %check-shared {
+        border-style: solid;
+        border-color: #3B4256;
+        border-width: 2px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+
+    @include phone {
+        &__title {
+            margin-left: 50px;
+        }
+
+        &__basic {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__button-3 {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+
+@font-face {
+    font-family: SF-UI-Display-Regular; /* Имя шрифта */
+    src: url(../../fonts/SF-UI-Display-Regular.ttf); /* Путь к файлу со шрифтом */
+}

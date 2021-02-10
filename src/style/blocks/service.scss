@@ -1,0 +1,82 @@
+.service {
+    color: #3B4256;
+    font-family: "GOST UI 2";
+    background: #E5E5E5;
+
+    &__title-description {
+        margin-top: 64px;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-family: "SF-UI-Display-Regular";
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__logo-description {
+        margin-top: 80px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__logo {
+        margin-bottom: 16px;
+    }
+
+    &__line {
+        margin-bottom: 40px;
+        opacity: .3;
+        border: 1px solid #3B4256;
+    }
+
+    @include phone {
+        padding-left: 15px;
+        padding-right: 15px;
+        &__logo-description {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        &__logo {
+            margin-right: 10px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    @include tablet {
+        padding-left: 15px;
+        padding-right: 15px;
+        &__logo-description {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        &__logo {
+            margin-right: 10px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    } 
+}
+
+@font-face {
+    font-family: SF-UI-Display-Regular; /* Имя шрифта */
+    src: url(../../fonts/SF-UI-Display-Regular.ttf); /* Путь к файлу со шрифтом */
+}

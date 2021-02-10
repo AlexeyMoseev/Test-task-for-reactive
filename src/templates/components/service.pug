@@ -1,0 +1,16 @@
+include ./reg-form
+
+mixin service()
+    .service
+            .container 
+                .row
+                    .service__title-description.col-xl-8.col-lg-8.col-md-11.col-sm-11.col-11
+                        h2.service__title Выдача градостроительного плана земельного участка
+                        p.service__description Градостроительный план земельного участка выдается в целях обеспечения субъектов градостроительной деятельности информацией, необходимой для архитектурно-строительного проектирования, строительства, реконструкции объектов капитального строительства в границах земельного участка.
+                    .col-1 
+                    .service__logo-description.col-xl-3.col-lg-3.col-md-12.col-sm-12.col-12
+                        img.service__logo(src="../images/Vector.svg")
+                        p Услугу предоставляет <br> Орган местного самоуправления       
+                    .service__line.col-12
+                    .col-xl-8.col-lg-8.col-md-12.col-sm-12.col-12 
+                        +reg-form()  

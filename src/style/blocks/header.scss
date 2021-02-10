@@ -1,0 +1,68 @@
+.header {
+  background: #3684E2;
+  font-family: "GOST UI 2";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  &__title {
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+  &__logo-title {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__logo {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 21px;
+  }
+
+  &__auth:hover {
+    opacity: .7;
+  }
+
+  &__auth-name {
+    color: #FFFFFF;
+  }
+
+  &__auth-exit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FFFFFF;
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    margin-right: 28px;
+  }
+
+  &__auth-logo {
+    margin-right: 15px;
+  }
+
+  @include tablet {
+    &__auth-name {
+      display: none;
+    }
+  }
+
+  @include phone {
+    padding-left: 15px;
+    padding-right: 15px;
+    &__auth-name {
+      display: none;
+    }
+  }
+}
