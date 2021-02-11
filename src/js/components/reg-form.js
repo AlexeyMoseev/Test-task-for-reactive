@@ -39,10 +39,11 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $('.js-reg-form__button-3').on('click', function () {
+    $('.js-reg-form__button-3').on('click', function (e) {
         $('.js-reg-form__button-3').css('border-style', 'solid');
         $('.js-reg-form__button-3').css('border-color', '#0050B2');
         $('.js-reg-form__button-3').css('border-width', '2px');
+        e.preventDefault();
     });
 
     //Выделение активных/неактивных элементов
