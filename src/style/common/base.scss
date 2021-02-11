@@ -87,10 +87,12 @@ video {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+
   &:hover {
     text-decoration: none;
   }
 }
+
 .col,
 .col-1,
 .col-10,
@@ -164,15 +166,17 @@ video {
   padding-left: 0;
   padding-right: 0;
 }
+
 button,
 button:active,
 button:focus {
   border: none;
   outline: none;
 }
+
 a,
- a:hover,
- a:focus,
- a:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
 }
